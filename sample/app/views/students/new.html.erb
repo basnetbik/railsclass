@@ -1,0 +1,13 @@
+
+<%= flash[:error] %>
+<ul>
+  <% @student.errors.full_messages.each do |msg| %>
+    <li><%= msg %> </li>
+  <% end %>
+</ul>
+<%= form_for( @student ) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.collection_select(:program_id,@programs,:id,:name) %>
+  <%= f.submit "create new" %>
+<% end %>
