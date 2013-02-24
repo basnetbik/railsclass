@@ -1,0 +1,12 @@
+<p>
+<b>Name:</b>
+<%= @program.name %>
+</p>
+<p>
+<b>Students:</b>
+<ul>
+<% @program.students.each do |student| %>
+	<li><%=student.name%></li>
+<% end %>
+</ul>
+</p>

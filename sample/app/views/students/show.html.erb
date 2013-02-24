@@ -10,7 +10,7 @@
 Name:
 <%= @student.name %>
 Program:
-<%= link_to @student.program.name,program_path(@student.program)%>
+<%= link_to @student.program.name, program_path(@student.program)%>
 <%= link_to "Edit", edit_student_path(@student) %>
 <%= link_to "Home", root_path %>
 <%= link_to "del", student_path(@student), :method => :delete, :confirm => "sure?" %>
